@@ -1,0 +1,25 @@
+[project]
+name = "rate-limit-lab"
+version = "0.1.0"
+description = "Rate limiters from scratch: fixed window, sliding log and token bucket, behind a real HTTP server."
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest==9.1.1", "ruff==0.16.10"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
